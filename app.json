@@ -1,0 +1,29 @@
+{
+    "name": "xibs",
+    "description": "I'm Web QR by xibs",
+    "logo": "https://i.ibb.co/HtT3vjm/goku-gif-3.gif",
+    "repository": "https://github.com/Giftedmaurice/giftedmdV2-session-generator",
+    "keywords": ["@Xcelsama", "xibs", "whatsapp-bot"],
+    "success_url": "/", 
+    "buildpacks": [
+        { "url": "https://github.com/heroku/heroku-buildpack-nodejs#latest" },
+        { "url": "heroku/nodejs" }
+    ],
+    "env": {      
+      "PORT": {
+        "description": "Port for web app.4000,5000,3000... any!",
+        "value": "5000",
+        "required": false 
+      },
+      "MESSAGE": {
+        "description": "set session id conformation message",
+        "value": "",
+        "required": false 
+      },
+      "MONGODB_URI": {
+        "description": "MongoDB connection string",
+        "value": "mongodb+srv://session_db:@#$123@cluster0.kfqin6s.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+        "required": true
+      }
+    }   
+}
